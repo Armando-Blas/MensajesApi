@@ -40,14 +40,9 @@
         </repository>
 
     </distributionManagement>
-    <scm>
-        <connection>scm:git:git://github.com/simpligility/ossrh-demo.git</connection>
-        <developerConnection>scm:git:ssh://github.com:simpligility/ossrh-demo.git</developerConnection>
-        <url>http://github.com/simpligility/ossrh-demo/tree/master</url>
-    </scm>
 
 
-    <url>https://seekop10.net</url>
+    <url>https://maven.apache.org</url>
 
     <dependencies>
         <!-- Dependencia de JPA -->
