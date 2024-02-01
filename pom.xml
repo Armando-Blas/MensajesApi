@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.seekop</groupId>
-    <artifactId>MensajesApi</artifactId>
+    <artifactId>mensajesapi</artifactId>
     <version>2.0</version>
 
     <description>jar que se encarga de hacer el llamado a la Api de idiomas para obtener la traduccion del idioma

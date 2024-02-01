@@ -29,17 +29,17 @@ public class MensajesIdiomasService {
     /**
      * Método para obtener un mensaje en el idioma y país configurados.
      *
-     * @param idgrupo    Identificador de grupo.
-     * @param idproceso  Identificador de proceso.
-     * @param idvariable Identificador de variable.
+     * @param grupo    Identificador de grupo.
+     * @param proceso  Identificador de proceso.
+     * @param variable Identificador de variable.
      * @param mensaje    Mensaje a traducir.
      * @return Mensaje traducido.
      */
-    public String obtenerMensaje(String idgrupo, String idproceso, String idvariable, String mensaje) {
+    public String obtenerMensaje(String grupo, String proceso, String variable, String mensaje) {
         String responseData = mensaje;
         try {
             // Construir la URL con los argumentos
-            String url = construirUrl(idIdioma, idpais, idgrupo, idproceso, idvariable, mensaje);
+            String url = construirUrl(idIdioma, idpais, grupo, proceso, variable, mensaje);
             System.out.println(url);
 
             // Crear una conexión HTTP
@@ -85,21 +85,21 @@ public class MensajesIdiomasService {
      *
      * @param idIdioma   Idioma para la URL.
      * @param idpais     País para la URL.
-     * @param idgrupo    Identificador de grupo para la URL.
-     * @param idproceso  Identificador de proceso para la URL.
-     * @param idvariable Identificador de variable para la URL.
+     * @param grupo    Identificador de grupo para la URL.
+     * @param proceso  Identificador de proceso para la URL.
+     * @param variable Identificador de variable para la URL.
      * @param mensaje    Mensaje para la URL.
      * @return URL construida.
      */
-    private String construirUrl(String idIdioma, String idpais, String idgrupo, String idproceso, String idvariable, String mensaje) {
+    private String construirUrl(String idIdioma, String idpais, String grupo, String proceso, String variable, String mensaje) {
         String dominio = "seekop10.sicopweb.net";
         String local = "localhost:8080";
         return "http://" + dominio + "/api/10.0.0/api-idiomas/search-message/" +
                 "ididioma=" + idIdioma +
                 "&idpais=" + idpais +
-                "&idgrupo=" + idgrupo +
-                "&idproceso=" + idproceso +
-                "&idvariable=" + idvariable +
+                "&idgrupo=" + grupo +
+                "&idproceso=" + proceso +
+                "&idvariable=" + variable +
                 "&mensaje=" + mensaje;
     }
 }
