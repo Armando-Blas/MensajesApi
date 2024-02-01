@@ -8,7 +8,8 @@
     <artifactId>MensajesApi</artifactId>
     <version>1.0</version>
 
-    <description>jar que se encarga de hacer el llamado a la Api de idiomas para obtener la traduccion del idioma</description>
+    <description>jar que se encarga de hacer el llamado a la Api de idiomas para obtener la traduccion del idioma
+    </description>
 
     <developers>
         <developer>
@@ -31,7 +32,14 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>MensajesApi</name>
+            <url>https://maven.pkg.github.com/Armando-Blas/MensajesApi</url>
+        </repository>
 
+    </distributionManagement>
     <scm>
         <connection>scm:git:git://github.com/simpligility/ossrh-demo.git</connection>
         <developerConnection>scm:git:ssh://github.com:simpligility/ossrh-demo.git</developerConnection>
@@ -56,20 +64,6 @@
         </dependency>
 
     </dependencies>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.sonatype.central</groupId>
-                <artifactId>central-publishing-maven-plugin</artifactId>
-                <version>0.3.0</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <publishingServerId>central</publishingServerId>
-                    <tokenAuth>true</tokenAuth>
-                </configuration>
-            </plugin>
 
-        </plugins>
-    </build>
 
 </project>
